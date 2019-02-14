@@ -37,12 +37,12 @@ public class MarvelNieceTest
     	
     	final String EXPECTED_OUTPUT_FILE_PATH = "output/defragmentedFile_expected.txt" ;
     	
-    String [] configs = {inputFilePath, split_Pattern, outputFilePath };
+        String [] configs = {inputFilePath, split_Pattern, outputFilePath };
     	
     	MarvelNiece niece = new MarvelNieceImpl(configs);
     	
     	niece.getCracking();
 
-    assertTrue( FragmentsUtil.compareFilesbyByte(outputFilePath,EXPECTED_OUTPUT_FILE_PATH) );
+    	assertTrue( FragmentsUtil.compareFilesbyByte(outputFilePath,EXPECTED_OUTPUT_FILE_PATH) );
     }
 }

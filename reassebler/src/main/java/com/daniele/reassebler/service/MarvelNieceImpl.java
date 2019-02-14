@@ -46,7 +46,7 @@ public class MarvelNieceImpl implements MarvelNiece{
 				
 				System.out.println("\nHere is your fixed line : '" + defragmentedLine + "'");
 				
-				writer.write("\n"+defragmentedLine+"\n");
+				writer.write(defragmentedLine);
 			}
 			
 		 }

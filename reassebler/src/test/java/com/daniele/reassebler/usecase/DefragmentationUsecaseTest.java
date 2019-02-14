@@ -32,9 +32,9 @@ public class DefragmentationUsecaseTest
 
     	LineDefragmentationUsecase usecase = new LineDefragmentationUsecase();
     	
-    	List<String> fragments = Arrays.asList("O", "draconia", "conian", "devil!", "Oh", "la", "h", "lame", "sa", "saint!"); 
-     //O draconian devil! Oh lame saint!
-    	List<String> expected = Arrays.asList("O", "draconian", "devil!", "Oh", "lame", "saint!"); 
+    	List<String> fragments = Arrays.asList("O draconia", "conian devil! Oh la", "h lame sa", "saint!"); 
+       //O draconian devil! Oh lame saint!
+    	List<String> expected = Arrays.asList("O draconian devil! Oh lame saint!"); 
    
     	List<String> defragmentedList = usecase.defragLine(fragments);
     	
