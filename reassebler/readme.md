@@ -3,22 +3,34 @@
 
  Overview : The application reassembles a given set of text fragments into their original sequence. The aim is to defragment each line according to an overlapping algorithm. 
  The approach consists of :
- 	1.Reading each line as a list of fragments 
- 	2.Defragmenting it : Processing it in order to calculate the overlapping matches and recoursively merge the 						fragments in relationship.
- 	3.Producing a fixed file as result of the defragmentation.
+ 	
+    1.Reading each line as a list of fragments 
+    2.Defragmenting it : Processing it in order to calculate the overlapping matches and 							recoursively merge the fragments in relationship.
+    3.Producing a fixed file as result of the defragmentation.
 
 
 ###1. configuration 
 
 Prepare a text file with a bunch of fragments spreaded out over each line. The fragments have to be separated by ;(or whatever pattern specified as input args) for each line
 
-Example : 
+A) Example  : 
 	
-	O draconia;conian devil! Oh la;h lame sa;saint!
+	"O draconia;conian devil! Oh la;h lame sa;saint!"
 	
-Example more complex :
+   Expected result :
+   
+	"O draconian devil! Oh lame saint!"
+	
+B) More complex example :
 
-	 aliqua;psum quia dolor sit amet, consectetur, a;Neque porro quisquam est, qu;Neque porro qui;Neque porro quisquam est, qui dolorem i;lorem ipsum quia dolor sit amet;ctetur, adipisci velit, sed quia non numq
+	 "aliqua;psum quia dolor sit amet, consectetur, a;Neque porro quisquam est, qu;Neque porro qui;Neque porro quisquam est, qui dolorem i;lorem ipsum quia dolor sit amet;ctetur, adipisci velit, sed quia non numq"
+
+   Result :
+   
+   
+	"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numq"
+   
+   
 
 ###2. Run
 
